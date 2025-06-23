@@ -2,11 +2,7 @@ FROM alpine:3.20
 
 # Install necessary tools, now including openssh-client
 # Use --no-cache to avoid storing the package index, keeping the image small
-RUN apk add --no-cache \
-    curl \
-    ca-certificates \
-    tar \
-    openssh-client
+RUN apk add --no-cache curl ca-certificates tar openssh-client
 
 # Set versions
 ENV OC_VERSION=4.15.0 \
